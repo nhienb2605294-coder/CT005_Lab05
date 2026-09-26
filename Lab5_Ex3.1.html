@@ -1,159 +1,51 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab5_Ex3.1 - Infographic & Video</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Giới Thiệu - Ứng Dụng Công Nghệ Số</title>
     <style>
-      :root {
-        --bg: #f4f7fb;
-        --card: #ffffff;
-        --text: #1f2a37;
-        --muted: #5b6472;
-        --accent: #2563eb;
-        --border: #dfe7f1;
-        --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-      }
-
-      * { box-sizing: border-box; }
-
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
-        color: var(--text);
-        line-height: 1.6;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 40px auto;
-        padding: 0 20px;
-      }
-
-      .page-header {
-        text-align: center;
-        margin-bottom: 28px;
-      }
-
-      .page-header h1 {
-        margin: 0 0 10px;
-        font-size: 2.2rem;
-      }
-
-      .page-header p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1.05rem;
-      }
-
-      .content {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 28px;
-        align-items: start;
-      }
-
-      .card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        padding: 22px;
-      }
-
-      .infographic-box img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-      }
-
-      .video-box h2 {
-        margin-top: 0;
-        margin-bottom: 14px;
-        font-size: 1.5rem;
-      }
-
-      .video-frame {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-        background: #000;
-      }
-
-      .video-frame iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-
-      .description {
-        margin-top: 18px;
-        color: var(--muted);
-        font-size: 0.98rem;
-      }
-
-      .copyright {
-        margin-top: 28px;
-        text-align: center;
-        font-size: 0.92rem;
-        color: var(--muted);
-        border-top: 1px solid var(--border);
-        padding-top: 18px;
-      }
-
-      @media (max-width: 800px) {
-        .content {
-          grid-template-columns: 1fr;
-        }
-
-        .page-header h1 {
-          font-size: 1.8rem;
-        }
-      }
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f7fb; color: #1f2a37; line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #2563eb; text-align: center; }
+        .description { font-size: 16px; margin-bottom: 25px; text-align: center; color: #4b5563; }
+        .media-section { margin-bottom: 35px; text-align: center; }
+        .media-section h3 { margin-bottom: 15px; color: #1e3a8a; }
+        iframe, img { max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .footer { text-align: center; font-size: 14px; color: #5b6472; margin-top: 30px; border-top: 1px solid #dfe7f1; padding-top: 15px; }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <header class="page-header">
-        <h1>Infographic & Video Hướng Dẫn</h1>
-        <p>Tổng hợp thông tin trực quan và video minh họa chi tiết.</p>
-      </header>
+</head>
+<body>
 
-      <main class="content">
-        <section class="card infographic-box" aria-label="Hình infographic">
-          <img src="Lab05_Ex2.1.png" alt="Infographic bài tập Lab05" />
-        </section>
+<div class="container">
+    <!-- 1. Tiêu đề và mô tả ngắn -->
+    <h1>Ứng Dụng Công Nghệ Số Trong Học Tập</h1>
+    <p class="description">Trang web tổng hợp nội dung đa phương tiện giới thiệu về lợi ích, hình ảnh infographic, video và tài liệu học tập thời đại số.</p>
 
-        <aside class="card video-box" aria-label="Video YouTube">
-          <h2>Video tham khảo</h2>
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/kvL3BbE_90s"
-              title="Video YouTube"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <p class="description">
-            Video này bổ sung thông tin và giúp người xem hiểu rõ hơn về nội dung được trình bày trong infographic.
-          </p>
-        </aside>
-      </main>
-
-      <div class="copyright">
-        © 2025. Bản quyền thuộc về nhóm thực hiện. Tài liệu này được sử dụng cho mục đích học tập và nghiên cứu.
-      </div>
+    <!-- 2. Phần hiển thị hình ảnh Infographic -->
+    <div class="media-section">
+        <h3>Ảnh Infographic</h3>
+        <img src="Lab05_Ex2.1.png.png" alt="Infographic Công Nghệ Số" width="600">
     </div>
-  </body>
+
+    <!-- 3. Phần hiển thị và phát video YouTube trực tiếp -->
+    <div class="media-section">
+        <h3>Video Giới Thiệu</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kvL3BbE_9Os?si=51v2BJYsWt_cBqF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- 4. Phần hiển thị file PDF tài liệu nhóm -->
+    <div class="media-section">
+        <h3>Tài Liệu Chi Tiết (PDF)</h3>
+        <embed src="Lab05_Ex1.2.pdf.pdf" type="application/pdf" width="100%" height="600px" />
+    </div>
+
+    <!-- 5. Ghi chú bản quyền và ghi chú nguồn AI -->
+    <div class="footer">
+        <p>&copy; 2026 Bản quyền thuộc về Nhóm học tập.</p>
+        <p><strong>Ghi chú nguồn:</strong> Nội dung văn bản và mã nguồn được hỗ trợ soạn thảo từ Google Gemini[cite: 1] và GitHub Copilot.</p>
+    </div>
+</div>
+
+</body>
 </html>
-
-
