@@ -1,3 +1,2 @@
- # Lab05_Ex2.2
+ #### CT005 – Lab05 – Thái Thị Mỹ Nhiên – B2605294 – Lớp 01S
 
-Video: https://www.youtube.com/watch?v=kvL3BbE_90s
